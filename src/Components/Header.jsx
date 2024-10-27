@@ -5,14 +5,14 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <div className={styles.header}>
+    <header className={styles.header}>
       <nav className={`styles.nav container`}>
         <Link className={styles.logo} to="/" aria-label="Dogs - Home">o svg de cara de cachorro tá quebrado ||| 
         {/* <Dogs /> */}
         </Link>
         <Link className={styles.login} to="/login">        Login / Criar</Link>
       </nav>
-    </div>
+    </header>
   );
 };
 
