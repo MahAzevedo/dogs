@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
   return (
     <div className={styles.header}>
-      <nav className={`styles.logo`}>
+      <nav className={`styles.nav`}>
         <Link className={styles.logo} to="/" aria-label="Dogs - Home">o svg de cara de cachorro tá quebrado ||| 
         {/* <Dogs /> */}
         </Link>
