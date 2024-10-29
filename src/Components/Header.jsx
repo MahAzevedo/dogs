@@ -9,14 +9,17 @@ const Header = () => {
   return (
     <header className={styles.header}>
 
-      <img className='logoDog' src={dog} alt="Logo cachorro feliz" />  {/* esse img é um teste */}
+      {/* <img className='logoDog' src={dog} alt="Logo cachorro feliz" />  */}
+      {/* esse img é um teste */}
 
 
       <nav className={`styles.nav container`}>
-        <Link className={styles.logo} to="/" aria-label="Dogs - Home">o svg de cara de cachorro tá quebrado ||| 
+        <Link className={styles.logo} to="/" aria-label="Dogs - Home">
+        {/* o svg de cara de cachorro tá quebrado |||  */}
         {/* <Dogs /> */}
         </Link>
-        <Link className={styles.login} to="/login">        Login / Criar</Link>
+        <Link className={styles.login} to="/login">    Login / Criar
+        </Link>
       </nav>
     </header>
   );
