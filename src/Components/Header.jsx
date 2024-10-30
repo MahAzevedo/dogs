@@ -3,7 +3,7 @@ import styles from './Header.module.css'
 import { Link } from 'react-router-dom';
 // import { ReactComponent as Dogs } from '../Assets/bird.avif';
 // import Dog from './img/dog.svg?react';
-import Dog from '../img/dog.png?react';
+import dog from '../img/dog.png?react';
 
 const Header = () => {
   return (
