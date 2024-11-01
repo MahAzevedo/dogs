@@ -4,8 +4,7 @@ import Input from '../Forms/Input';
 import Button from '../Forms/Button';
 
 const LoginForm = () => {
-  const [username, setUsername] = React.useState('');
-  const [password, setPassword] = React.useState('');
+ 
 
   function handleSubmit(event) {
     event.preventDefault();
