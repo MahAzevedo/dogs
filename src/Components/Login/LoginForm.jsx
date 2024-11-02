@@ -12,7 +12,6 @@ const LoginForm = () => {
     event.preventDefault();
 
     if(username.validate() && password.validate()) {
-
     fetch('https://dogsapi.origamid.dev/json/jwt-auth/v1/token', {
       method: 'POST',
       headers: {
