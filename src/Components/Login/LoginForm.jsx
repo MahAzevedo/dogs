@@ -12,21 +12,21 @@ const LoginForm = () => {
     event.preventDefault();
 
     if(username.validate() && password.validate()) {
-    fetch('https://dogsapi.origamid.dev/json/jwt-auth/v1/token', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(),
-    })
-    .then((response) => {
-      (response);
-      return response.json();
-    })
-    .then((json) => {
-      (json);
-    });
-   }
+      fetch('https://dogsapi.origamid.dev/json/jwt-auth/v1/token', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(),
+      })
+        .then((response) => {
+          (response);
+          return response.json();
+        })
+        .then((json) => {
+          (json);
+        });
+    }
   }
 
   return (
