@@ -13,8 +13,9 @@ const LoginForm = () => {
 
     if(username.validate() && password.validate()) {
       const { url, options } = TOKEN_POST({
-        username
-      })
+        username: username.value, 
+        password: password.value,
+      });
 
       fetch('https://dogsapi.origamid.dev/json/jwt-auth/v1/token', {
         method: 'POST',
