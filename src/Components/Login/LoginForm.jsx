@@ -9,7 +9,7 @@ const LoginForm = () => {
  const username = useForm();
  const password = useForm();
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
 
     if(username.validate() && password.validate()) {
@@ -18,14 +18,9 @@ const LoginForm = () => {
         password: password.value,
       });
 
-      fetch( url, options)
-        .then((response) => {
-          (response);
-          return response.json();
-        })
-        .then((json) => {
-          (json);
-        });
+      const response = await fetch( url, options);
+      const json = await response.json();
+      console.log(json)
     }
   }
 
