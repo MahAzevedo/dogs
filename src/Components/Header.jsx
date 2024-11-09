@@ -4,8 +4,12 @@ import { Link } from 'react-router-dom';
 // import { ReactComponent as Dogs } from '../Assets/bird.avif';
 // import Dog from './img/dog.svg?react';
 // import dog from '../img/dog.png?react';
+import { UserContext } from '../UserContext';
 
 const Header = () => {
+  const context = React.useContext(UserContext);
+  console.log(context)
+
   return (
     <header className={styles.header}>
 
@@ -18,7 +22,9 @@ const Header = () => {
         {/* o svg de cara de cachorro tá quebrado |||  */}
         {/* <Dogs /> */}
         </Link>
-        <Link className={styles.login} to="/login">    Login / Criar
+        <Link className={styles.login} to="/login"> 
+        {context.usuario}   
+        Login / Criar
         </Link>
       </nav>
     </header>
