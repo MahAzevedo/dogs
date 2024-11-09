@@ -34,11 +34,6 @@ const LoginForm = () => {
         username: username.value, 
         password: password.value,
       });
-
-      const response = await fetch( url, options);
-      const json = await response.json();
-      window.localStorage.setItem('token', json.token);
-      getUser(json.token);
     }
   }
 
