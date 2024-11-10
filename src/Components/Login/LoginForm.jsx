@@ -30,7 +30,7 @@ const LoginForm = () => {
     event.preventDefault();
 
     if(username.validate() && password.validate()) {
-      
+      userLogin(username.value, password.value)
     }
   }
 
