@@ -30,10 +30,7 @@ const LoginForm = () => {
     event.preventDefault();
 
     if(username.validate() && password.validate()) {
-      const { url, options } = TOKEN_POST({
-        username: username.value, 
-        password: password.value,
-      });
+      
     }
   }
 
