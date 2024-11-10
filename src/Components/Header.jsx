@@ -7,8 +7,7 @@ import { Link } from 'react-router-dom';
 import { UserContext } from '../UserContext';
 
 const Header = () => {
-  const context = React.useContext(UserContext);
-  console.log(context)
+  const {data} = React.useContext(UserContext);
 
   return (
     <header className={styles.header}>
@@ -22,8 +21,8 @@ const Header = () => {
         {/* o svg de cara de cachorro tá quebrado |||  */}
         {/* <Dogs /> */}
         </Link>
-        <Link className={styles.login} to="/login"> 
-        {context.usuario}   
+        {data && data.email}
+        <Link className={styles.login} to="/login">   
         Login / Criar
         </Link>
       </nav>
