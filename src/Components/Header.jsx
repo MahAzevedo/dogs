@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom';
 // import dog from '../img/dog.png?react';
 import { UserContext } from '../UserContext';
 // import dogFooter from '../img/dogs.footer?react';
+// import Dog from '../img/dogs.footer?react';
+
 
 
 const Header = () => {
@@ -20,8 +22,7 @@ const Header = () => {
 
       <nav className={`styles.nav container`}>
         <Link className={styles.logo} to="/" aria-label="Dogs - Home">
-        {/* o svg de cara de cachorro tá quebrado |||  */}
-        {/* <Dogs /> */}
+        {/* <Dog /> */}
         </Link>
         {data && data.email}
         <Link className={styles.login} to="/login">   
