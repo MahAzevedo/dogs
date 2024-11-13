@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import { UserContext } from '../UserContext';
 // import dogFooter from '../img/dogs.footer?react';
 // import Dog from '../img/dogs.footer?react';
-
+// import Dog from './img/dog.svg?react';
 
 
 const Header = () => {
