@@ -18,7 +18,7 @@ const Header = () => {
 
       {/* <img className='logoDog' src={dog} alt="Logo cachorro feliz" />  */}
       {/* esse img é um teste */}
-
+{/* img dogs-footer no header */}
 
       <nav className={`styles.nav container`}>
         <Link className={styles.logo} to="/" aria-label="Dogs - Home">
