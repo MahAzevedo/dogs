@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Header.module.css'
 import { Link } from 'react-router-dom';
-// import { ReactComponent as Dogs } from '../Assets/bird.avif';
+
 // import Dog from './img/dogs.svg?react';
 // import dog from '../img/dog.png?react';
 import { UserContext } from '../UserContext';
