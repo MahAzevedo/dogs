@@ -2,10 +2,10 @@ import React from 'react';
 import styles from './Header.module.css'
 import { Link } from 'react-router-dom';
 // import Dog from './img/dog.svg?react';
+import { UserContext } from '../UserContext';
 
 // import Dog from './img/dogs.svg?react';
 // import dog from '../img/dog.png?react';
-import { UserContext } from '../UserContext';
 // import dogFooter from '../img/dogs.footer?react';
 // import Dog from '../img/dogs.footer?react';
 // import Dog from './img/dog.svg?react';
