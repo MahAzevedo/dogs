@@ -9,10 +9,9 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <img className='logoDog' src={Dog} alt="Logo cachorro feliz" /> 
-      <nav className={`styles.nav container`}>
+      <nav className={`${styles.nav} container`}>
         <Link className={styles.logo} to="/" aria-label="Dogs - Home">
-        <Dog />
+          <Dog />
         </Link>
         {data && data.email}
         <Link className={styles.login} to="/login">   
