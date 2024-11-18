@@ -1,29 +1,18 @@
 import React from 'react';
 import styles from './Header.module.css'
 import { Link } from 'react-router-dom';
-// import Dog from './img/dog.svg?react';
+import Dog from '../Assets/dogs.svg?react';
 import { UserContext } from '../UserContext';
-
-// import Dog from './img/dogs.svg?react';
-// import dog from '../img/dog.png?react';
-// import dogFooter from '../img/dogs.footer?react';
-// import Dog from '../img/dogs.footer?react';
-// import Dog from './img/dog.svg?react';
-
 
 const Header = () => {
   const {data} = React.useContext(UserContext);
 
   return (
     <header className={styles.header}>
-
-      {/* <img className='logoDog' src={dog} alt="Logo cachorro feliz" />  */}
-      {/* esse img é um teste */}
-{/* img dogs-footer no header */}
-
+      <img className='logoDog' src={Dog} alt="Logo cachorro feliz" /> 
       <nav className={`styles.nav container`}>
         <Link className={styles.logo} to="/" aria-label="Dogs - Home">
-        {/* <Dog /> */}
+        <Dog />
         </Link>
         {data && data.email}
         <Link className={styles.login} to="/login">   
