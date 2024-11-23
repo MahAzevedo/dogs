@@ -13,14 +13,15 @@ const Header = () => {
         <Link className={styles.logo} to="/" aria-label="Dogs - Home">
           <Dog />
         </Link>
-        {data && (
+        {data ? (
+          <Link className={styles.login} to="/conta">   
+            {data.nome}
+        </Link>
+        ) : (
           <Link className={styles.login} to="/login">   
-          Login / Criar
-        </Link>
+             Login / Criar
+          </Link>
         )}
-        <Link className={styles.login} to="/login">   
-          Login / Criar
-        </Link>
       </nav>
     </header>
   );
