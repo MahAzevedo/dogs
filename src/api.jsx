@@ -23,7 +23,7 @@ export function TOKEN_VALIDATE_POST(token) {
                 Authorization: 'Bearer ' + token,
             },
         },
-    },
+    };
 }
 
 export function USER_GET(token) {
