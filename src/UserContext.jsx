@@ -36,7 +36,7 @@ export const UserStorage = ({ children }) => {
         setLoading(true);
         const {url, options} = TOKEN_POST({username, password});
         const tokenResponse = await fetch(url, options);
-        if(!tokenResponse.ok) throw new Error(`Error: ${tokenResponse.statusText}`);
+        if(!tokenResponse.ok) throw new Error(`Error: Forbidden  ${tokenResponse.statusText}`);
         const {token} = await tokenResponse.json();
         window.localStorage.setItem('token', token);
         await getUser(token);
