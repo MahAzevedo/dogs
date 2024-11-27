@@ -12,4 +12,19 @@
     background-size: cover;
 }
 
-.forms {}
+.forms {
+    max-width: 30rem;
+    padding: 1rem;
+}
+
+@media (max-width: 40rem) {  /* max-width p/ tudo que for menor que 40rem*/
+    .login {
+        grid-template-columns: 1fr;
+    }
+    .login::before {
+        display: none;
+    }
+    .forms {
+        max-width: 100%;
+    }
+}
