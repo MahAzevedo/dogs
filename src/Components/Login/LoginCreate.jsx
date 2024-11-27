@@ -7,7 +7,7 @@ const LoginCreat = () => {
 
     const username = useForm();
     const email = useForm('email');
-    const password = useForm('password');
+    const password = useForm(); /*'password'*/
 
   function handleSubmit(event) {
     event.preventDefault();
