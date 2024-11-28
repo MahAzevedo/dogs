@@ -34,18 +34,19 @@ export function USER_GET(token) {
             headers: {
                 Authorization: 'Bearer ' + token,
             },
-        }
-    }
+        },
+    };
 }
 
-export function USER_GET(token) {
+export function USER_POST(body) {
     return {
         url: API_URL + '/api/user',
         options: {
-            method: 'GET',
+            method: 'POST',
             headers: {
-                Authorization: 'Bearer ' + token,
+                'Content-Type': 'application/json',
             },
-        }
-    }
+            body: JSON.stringify(body), 
+        },
+    };
 }
