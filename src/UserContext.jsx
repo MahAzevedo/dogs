@@ -1,5 +1,5 @@
 import React from 'react';
-import { TOKEN_POST, TOKEN_VALIDATE_POST, USER_GET } from './Api';
+import { TOKEN_POST, TOKEN_VALIDATE_POST, USER_GET } from './api';
 import { useNavigate } from 'react-router-dom';
 
 export const UserContext = React.createContext();
@@ -64,13 +64,42 @@ export const UserStorage = ({ children }) => {
             userLogout();
           } finally {
             setLoading(false);
-          }
-        }
+          };
+        };
       }
       autoLogin();
     }, 
-    [userLogout],
+    [],
   );
+
+  // React.useEffect(() => {
+  //   async function autoLogin() {
+  //     const token = window.localStorage.getItem('token');
+  //     if (token) {
+  //       try {
+  //         setError(null);
+  //         setLoading(true);
+  //         const { url, options } = TOKEN_VALIDATE_POST('token'); // Verifique essa função
+  //         const response = await fetch(url, options);
+          
+  //         if (!response.ok) {
+  //           const errorData = await response.json();  // Verifique a resposta da API
+  //           throw new Error(errorData?.message || 'Token inválido');
+  //         }
+          
+  //         await getUser(token); // Certifique-se de que getUser está funcionando corretamente
+  //       } catch (err) {
+  //         console.error(err); // Pode ajudar a debugar
+  //         userLogout();
+  //       } finally {
+  //         setLoading(false);
+  //       }
+  //     }
+  //   }
+  
+  //   autoLogin();
+  // }, []); // Remova userLogout da dependência, a menos que seja necessário
+
 
   return (
     <UserContext.Provider value={{ userLogin, data, userLogout, error, loading, login }}>
