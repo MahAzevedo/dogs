@@ -65,7 +65,9 @@ export const UserStorage = ({ children }) => {
           } finally {
             setLoading(false);
           };
-        };
+        } else {
+          setLoading(false);
+        }
       }
       autoLogin();
     }, 
