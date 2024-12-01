@@ -15,7 +15,7 @@ const ProtectedRoute = ({children}) => {
 };
 
 export default ProtectedRoute;
-// essa forma não envia para login, primeiro ela confere se já está logado
+// essa forma não envia para login, primeiro ela confere se já está logado, é a forma mais recente do React
 
 
 
