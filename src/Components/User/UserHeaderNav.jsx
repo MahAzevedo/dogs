@@ -7,18 +7,28 @@ import Estatisticas from '../../Assets/estatisticas.svg?react';
 import AdicionarFoto from '../../Assets/usuario.svg?react';  //foto adicionar tá quebrada
 import Sair from '../../Assets/sair.svg?react';
 import styles from './UserHeaderNav.module.css';
+import useMedia from '../../Hooks/useMedia';
 
 const UserHeaderNav = () => {
-  const [mobile, setMobile] = React.useState(null);  
   const { userLogout } = React.useContext(UserContext);
-  const navigate = useNavigate();
+  // const navigate = useNavigate(); //excluir
+  const mobile = useMedia('(max-width: 40rem)');
+  const [mobileMenu, setMobileMenu] = React.useState(false);
 
   function handleLogout() {
     userLogout();
     navigate('/login');
- }
+ };
 
   return (
+    <>
+    {mobile && (
+      <button 
+        aria-label="Menu" 
+        className={styles.mobileButton}
+        onClick={() => setMobileMenu(!mobileMenu)}>
+      </button>
+    )}
     <nav className={styles.nav}>
       <NavLink to="/conta" end>
         <MinhasFotos /> 
@@ -40,7 +50,9 @@ const UserHeaderNav = () => {
           {mobile && 'Sair'}
       </button>
     </nav>
+    </>
   );
 };
+
 
 export default UserHeaderNav;
