@@ -21,10 +21,10 @@ const UserHeaderNav = () => {
 
 //const navigate = useNavigate(); //excluir
 
-//   function handleLogout() {
-//     userLogout();
-//     navigate('/login');
-//  };
+  function handleLogout() {
+    userLogout();
+    navigate('/login');
+ };
 
   return (
     <>
