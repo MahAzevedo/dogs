@@ -1,10 +1,11 @@
 import React from 'react';
+import styles from './UserPhotoPost.module.css';
 
 const UserPhotoPost = () => {
   return (
-    <div>
+    <section className={`${styles.photoPost} animeLeft`}>
       Postar foto
-    </div>
+    </section>
   );
 };
 

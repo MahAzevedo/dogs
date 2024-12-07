@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate, useLocation } from 'react-router-dom';
 import { UserContext } from '../../UserContext';
 import MinhasFotos from '../../Assets/feed.svg?react';
 import Estatisticas from '../../Assets/estatisticas.svg?react';
@@ -19,7 +19,7 @@ const UserHeaderNav = () => {
     setMobileMenu(false);
   }, [pathname]);
 
-//const navigate = useNavigate(); //excluir
+const navigate = useNavigate(); //excluir
 
   function handleLogout() {
     userLogout();
