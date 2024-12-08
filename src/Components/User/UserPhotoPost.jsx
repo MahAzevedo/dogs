@@ -4,7 +4,7 @@ import styles from './UserPhotoPost.module.css';
 const UserPhotoPost = () => {
   return (
     <section className={`${styles.photoPost} animeLeft`}>
-      Postar foto
+      <form onSubmit={handleSubmit}></form>
     </section>
   );
 };
