@@ -1,8 +1,10 @@
 import React from 'react';
 import FeedPhotosItem from './FeedPhotosItem';
 import useFetch from '../../Hooks/useFetch';
+import { PHOTOS_GET } from '../../api';
 import Error from '../Helper/Error';
 import Loading from '../Helper/Loading';
+import styles from './FeedPhotos.module.css';
 
 const FeedPhotos = () => {
 
@@ -11,8 +13,7 @@ const FeedPhotos = () => {
   React.useEffect(() => {
     async function fetchPhotos() {
       const { url, options } = PHOTOS_GET({ page: 1, total: 6, user: 0 });
-      const {response, json} = await request(url, options);
-      console.log(json)
+      const {json} = await request(url, options); {/*response, json*/}
     }
     fetchPhotos();
   }, [request]);
@@ -21,8 +22,10 @@ const FeedPhotos = () => {
   if(loading) return <Loading /> 
   if(data) 
   return (
-    <ul>
-      {data.map(photo => <FeedPhotosItem key={photo.id} photo={photo} />)}
+    <ul className={`${styles.feed} animeLeft`}>
+      {data.map((photo) => (
+        <FeedPhotosItem key={photo.id} photo={photo} />
+      ))}
     </ul>
   );
   else return null;
