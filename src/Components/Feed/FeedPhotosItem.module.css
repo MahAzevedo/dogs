@@ -21,13 +21,26 @@
     grid-area: 1/1;
 }
 
-.photo span {
+.visualizacao {
     background-color: rgba(0, 0, 0, 0.3s);
     color: white;
     font-size: 1rem;
     text-align: 1rem;
-    display: flex;
     align-items: center;
     justify-content: center;
     grid-area: 1/1;
+    display: none;
+}
+
+.visualizacao::before {
+    width: 16px;
+    height: 10px;
+    content: '';
+    display: inline-block;
+    margin-right: 0.25rem;
+    background: url('../../Assets/visualizacao.svg') no-repeat;
+}
+
+.photo:hover .visualizacao {
+    display: flex;
 }
