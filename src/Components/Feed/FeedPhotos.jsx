@@ -24,7 +24,11 @@ const FeedPhotos = ({setModalPhoto}) => {
   return (
     <ul className={`${styles.feed} animeLeft`}>
       {data.map((photo) => (
-        <FeedPhotosItem key={photo.id} photo={photo} />
+        <FeedPhotosItem 
+         key={photo.id} 
+         photo={photo} 
+         setModalPhoto={setModalPhoto} 
+      />
       ))}
     </ul>
   );
