@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './PhotoContent.module.css';
 
 const PhotoContent = ({data}) => {
-    
+    const {photo, comments}
 
   return (
     <div className={styles.photo}>
