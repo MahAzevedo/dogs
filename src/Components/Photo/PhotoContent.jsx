@@ -2,12 +2,12 @@ import React from 'react';
 import styles from './PhotoContent.module.css';
 
 const PhotoContent = ({data}) => {
-    const {photo, comments}
+    const {photo, comments} = data;
 
   return (
     <div className={styles.photo}>
       <div className={styles.img}>
-        <img src={data} alt="" />
+        <img src={photo.src} alt={photo.title} />
       </div>
     </div>
   );
