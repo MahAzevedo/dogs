@@ -2,6 +2,8 @@ import React from 'react';
 import styles from './Loading.module.css';
 
 const Loading = () => {
+  const [step, setStep] = React.useState(0);
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.loading}>
