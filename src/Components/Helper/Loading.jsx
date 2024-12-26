@@ -14,7 +14,7 @@ const Loading = () => {
           fill="none" 
           xmlns="http://www.w3.org/2000/svg"
         >
-          <g style={{ display: 'none' }}>
+          <g style={{ display: step === 0 ? 'block' : 'none' }}>
             <path 
               fillRule="evenodd" 
               clipRule="evenodd" 
