@@ -17,7 +17,7 @@ const Feed = ({user}) => {
         wait = true;
         setTimeout(() => {
           wait = false;
-        }, 500)
+        }, 500) // miliseconds
       }
     }
 
