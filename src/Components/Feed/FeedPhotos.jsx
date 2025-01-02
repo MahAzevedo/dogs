@@ -7,7 +7,6 @@ import Loading from '../Helper/Loading';
 import styles from './FeedPhotos.module.css';
 
 const FeedPhotos = ({page, user, setModalPhoto}) => {
-
   const {data, error, loading, request} = useFetch();
 
   React.useEffect(() => {
