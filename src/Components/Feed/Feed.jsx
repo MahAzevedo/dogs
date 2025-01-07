@@ -5,7 +5,7 @@ import FeedPhotos from './FeedPhotos';
 const Feed = ({user}) => {
   const [modalPhoto, setModalPhoto] = React.useState(null);
   const [pages, setPages] = React.useState([1]);
-  const [infinite, setInfinite] = React.useState(null);
+  const [infinite, setInfinite] = React.useState(true);
 
   React.useEffect(() => {
     let wait = false;
@@ -17,7 +17,7 @@ const Feed = ({user}) => {
         wait = true;
         setTimeout(() => {
           wait = false;
-        }, 500) // miliseconds
+        }, 500) 
       }
     }
 
