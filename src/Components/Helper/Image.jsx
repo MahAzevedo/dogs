@@ -1,4 +1,4 @@
-import React, { useState } from 'react';  // , { useState } keep or delete?!
+import React, { useState } from 'react';  
 import styles from './Image.module.css';
 
 const Image = ({alt, ...props}) => {
