@@ -1,6 +1,6 @@
 import React from 'react';
 
-const UserStatsGraphs = () => {
+const UserStatsGraphs = ({data}) => {
   return (
     <div>
       
