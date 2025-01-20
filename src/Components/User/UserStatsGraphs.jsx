@@ -6,7 +6,7 @@ const UserStatsGraphs = ({data}) => {
     const [total, setTotal] = React.useState(0);
 
     React.useEffect(() => {
-      console.log(data.map(({acessos}) => acessos));
+      console.log(data.map(({acessos}) => Number(acessos)));
       // setTotal(data.map(({acessos}) => acessos));
       console.log(data);
     }, [data]);
