@@ -86,3 +86,6 @@ a {
     }
 }
 
+.VictoryContainer {
+    height: initial !important;
+}
