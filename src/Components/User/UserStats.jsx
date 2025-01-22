@@ -5,6 +5,9 @@ import Loading from '../Helper/Loading';
 import Error from '../Helper/Error';
 import UserStatsGraphs from './UserStatsGraphs';
 
+// import { STATS_GET } from './api';
+// import { UserStats } from 'react';
+
 const UserStats = () => {
   const {data, error, loading, request} = useFetch();
 

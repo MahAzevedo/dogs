@@ -150,7 +150,7 @@ export function STATS_GET() {
             method: 'GET',
             headers: {
                 Authorization: 'Bearer ' + window.localStorage.getItem('token'),
+            },
         },
-    },
-  };
+    };
 }
