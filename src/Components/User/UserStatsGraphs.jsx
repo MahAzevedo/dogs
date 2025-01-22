@@ -7,7 +7,16 @@ const UserStatsGraphs = ({data}) => {
     const [total, setTotal] = React.useState(0);
 
     React.useEffect(() => {
+      const graphData = data.map(item => {
+        return {
+          x: item.title,
+          y: Number(item.acessos)
+        }
+      });
+
       setTotal(data.map(({acessos}) => Number(acessos)).reduce((a, b) => a + b, 0));
+      setGraph(graphData);
+      console.log(data)
     }, [data]);
     
   return (
@@ -17,16 +26,7 @@ const UserStatsGraphs = ({data}) => {
       </div>
       <div>
         <VictoryPie 
-          data={[
-            {
-              x: 'Teste',
-              y: '4',
-            },
-            {
-              x: 'Ellie',
-              y: '10',
-            }
-          ]} 
+          data={graph} 
         />
       </div>
     </section>
