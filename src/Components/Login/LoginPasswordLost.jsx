@@ -12,14 +12,13 @@ const LoginPasswordLost = () => {
   const {data, loading, error, request} = useFetch();
 
   async function handleSubmit(event) {
-    event.preventDefautl();
+    event.preventDefault();
     if(login.validate()) {
     const {url, options} = PASSWORD_LOST({
       login: login.value, 
       url: window.location.href.replace('perdeu', 'resetar'),
     });
     const {json} = await request(url, options);
-    console.log(json)
     }
   }
 
@@ -35,7 +34,7 @@ const LoginPasswordLost = () => {
       {loading ? (
         <Button disabled>Enviando...</Button>
       ) : (
-         <Button>Enviar E-mail</Button>
+        <Button>Enviar E-mail</Button>
       )}
       </form>
     )}

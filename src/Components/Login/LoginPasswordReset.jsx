@@ -24,7 +24,7 @@ const LoginPasswordReset = () => {
   }, [])
 
   async function handleSubmit(event) {
-    event.preventDefautl();
+    event.preventDefault();
     if(password.validate()) {
     const {url, options} = PASSWORD_RESET({
       login,

@@ -14,7 +14,8 @@ const UserStatsGraphs = ({data}) => {
         }
       });
 
-      setTotal(data.map(({acessos}) => Number(acessos)).reduce((a, b) => a + b, 0));
+      setTotal(data.map(({acessos}) => Number(acessos)).reduce((a, b) => a + b, 0),
+      );  
       setGraph(graphData);
     }, [data]);
     
@@ -37,7 +38,7 @@ const UserStatsGraphs = ({data}) => {
             labels: {
               fontSize: 14,
               fill: '#333',
-            }
+            },
           }}
         />
       </div>

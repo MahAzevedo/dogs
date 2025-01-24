@@ -13,7 +13,7 @@ const UserStats = () => {
 
   React.useEffect(() => {
     async function getData() {
-      const {url, options} = STATS_GET(); // 
+      const {url, options} = STATS_GET(); 
       await request(url, options)
     }
     getData();
