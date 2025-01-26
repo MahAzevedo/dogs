@@ -6,7 +6,7 @@ import Loading from '../Helper/Loading';
 import Error from '../Helper/Error';
 // import UserStatsGraphs from './UserStatsGraphs';  apagar, está abaixo
 const UserStatsGraphs = React.lazy(() => import('./UserStatsGraphs'));
-//lazy para bibliotecas esternas e/ou muito pesadas
+//lazy para bibliotecas externas e/ou muito pesadas
 
 const UserStats = () => {
   const {data, error, loading, request} = useFetch();
