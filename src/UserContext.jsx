@@ -90,16 +90,7 @@ export const UserStorage = ({ children }) => {
           
   //         await getUser(token); // Certifique-se de que getUser está funcionando corretamente
   //       } catch (err) {
-  //         console.error(err); // Pode ajudar a debugar
-  //         userLogout();
-  //       } finally {
-  //         setLoading(false);
-  //       }
-  //     }
-  //   }
-  
-  //   autoLogin();
-  // }, []); // Remova userLogout da dependência, a menos que seja necessário
+ 
 
 
   return (
