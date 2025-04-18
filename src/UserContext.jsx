@@ -82,14 +82,7 @@ export const UserStorage = ({ children }) => {
   //         setLoading(true);
   //         const { url, options } = TOKEN_VALIDATE_POST('token'); // Verifique essa função
   //         const response = await fetch(url, options);
-          
-  //         if (!response.ok) {
-  //           const errorData = await response.json();  // Verifique a resposta da API
-  //           throw new Error(errorData?.message || 'Token inválido');
-  //         }
-          
-  //         await getUser(token); // Certifique-se de que getUser está funcionando corretamente
-  //       } catch (err) {
+
  
 
 
