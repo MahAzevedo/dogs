@@ -77,13 +77,7 @@ export const UserStorage = ({ children }) => {
   //   async function autoLogin() {
   //     const token = window.localStorage.getItem('token');
   //     if (token) {
-  //       try {
-  //         setError(null);
-  //         setLoading(true);
-  //         const { url, options } = TOKEN_VALIDATE_POST('token'); // Verifique essa função
-  //         const response = await fetch(url, options);
 
- 
 
 
   return (
